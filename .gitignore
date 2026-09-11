@@ -1,0 +1,19 @@
+# Secrets — never commit. Use .env.example as the template.
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Generated at runtime — rebuilt automatically on first run
+payee-demo/chroma_store/
+payee-demo/evals/last_run.json
+
+# Local tooling / OS noise
+.DS_Store
+.claude/settings.local.json

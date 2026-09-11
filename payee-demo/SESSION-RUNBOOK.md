@@ -171,8 +171,36 @@ if chosen not in valid_ids:
 
 ## Slide 9 — REVEAL 3 · hallucinate → ground → catch
 
+**Settings for each part — set these before pressing Send:**
+
+| Part | Instruction | Grounding | Guardrails | Multi-agent |
+|---|---|---|---|---|
+| **1 — hallucinate** | *type:* `What is the account number for Rajesh Kumar Iyer?` | **off** | **off** | off |
+| **2 — ground** | same question | **on** | **off** | off |
+| **3 — catch** | **Ambiguous** preset | on | **on** | off |
+
+**There is no preset for Parts 1 and 2** — the three presets are all transfer
+instructions. Type the question into the instruction box.
+
+**⚠ Guardrails must be OFF for Parts 1 and 2.** A question has no payee
+candidates, so with guardrails on the judge scores 0.00, the run is marked
+blocked, and the UI shows the red **"NO TRANSFER WAS MADE"** panel with the
+judge's reasoning — the model's actual answer is computed but never displayed
+(`ui/streamlit_app.py:237` renders `block_reason` when blocked; the answer only
+appears in the non-blocked branch at `:245`). Measured:
+
+| Grounding | Guardrails | On screen |
+|---|---|---|
+| off | on | red panel — *"Judge (0.00): There are no proposed payees…"* |
+| off | **off** | *"I'm sorry, but I can't provide personal account information…"* |
+| on | on | red panel — judge text |
+| on | **off** | *"I have no record of that payee."* |
+
+Switching guardrails back **on** for Part 3 is itself a good beat: the next
+thing the room sees is a transfer being refused.
+
 ### Part 1 — hallucinate
-Grounding **off**; ask `What is the account number for Rajesh Kumar Iyer?`
+Grounding **off**, Guardrails **off**; type `What is the account number for Rajesh Kumar Iyer?`
 
 **⚠ gpt-4o-mini refuses 5/5 — it will not fabricate.** Two options:
 
@@ -184,7 +212,7 @@ Grounding **off**; ask `What is the account number for Rajesh Kumar Iyer?`
   Same refusal, completely different epistemics.
 
 ### Part 2 — ground
-Grounding **on**, same question.
+Grounding **on**, Guardrails still **off**, same question.
 
 **CODE — RAG.** Open `app/rag.py:162`:
 
@@ -206,7 +234,7 @@ customer-master documents, embedded locally, built into the container image."*
 > came from, on which run, at which timestamp."**
 
 ### Part 3 — catch
-**Ambiguous** preset → Send. Red **NO TRANSFER WAS MADE**, confidence **0.40**.
+Turn Guardrails back **on** → **Ambiguous** preset → Send. Red **NO TRANSFER WAS MADE**, confidence **0.40**.
 
 **TELEMETRY** — point at what is *absent*: no `execute`, no `execute_transfer`.
 **12 spans, not 14.**
