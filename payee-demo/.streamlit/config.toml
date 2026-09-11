@@ -1,0 +1,10 @@
+# No [theme] block on purpose: leaving it out keeps Streamlit's own appearance
+# switcher available (menu -> Settings -> Appearance: Light / Dark / System),
+# so the demo can be shown either way. The custom panels in
+# ui/streamlit_app.py are built to work in both themes -- they tint whatever
+# background is active rather than hard-coding one.
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

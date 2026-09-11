@@ -1,0 +1,38 @@
+# payee-demo — pinned dependencies
+#
+# Resolved together against Python 3.11.16 with `uv pip compile`, so these 14
+# versions are known to be mutually compatible (216 packages in the full
+# transitive graph). Only direct dependencies are pinned here to keep the file
+# readable; the Dockerfile installs from this file.
+#
+# Re-resolve with:
+#   uv pip compile requirements.txt --python .venv/bin/python -o /tmp/lock.txt
+
+# --- Agent framework ---
+langgraph==1.2.11
+langchain==1.4.0
+langchain-openai==1.6.1
+# Not named in the original spec, but MODEL_PROVIDER must accept "anthropic";
+# without this the anthropic branch of get_llm() cannot import. See README.
+langchain-anthropic==1.7.1
+langchain-community==0.4.2
+
+# --- Retrieval ---
+chromadb==1.5.9
+
+# --- UI ---
+streamlit==1.63.0
+
+# --- Telemetry (OTLP export only; Phoenix server not needed in-container) ---
+opentelemetry-sdk==1.44.0
+opentelemetry-exporter-otlp==1.44.0
+openinference-instrumentation-langchain==0.1.74
+langfuse==4.15.1
+
+# --- Config / validation ---
+python-dotenv==1.2.3
+pydantic==2.13.5
+
+# arize-phoenix deliberately omitted: it is the Phoenix SERVER and nothing
+# in the container imports it. Saves 82 packages / ~223 MB. Traces still
+# export fine via opentelemetry-exporter-otlp above.

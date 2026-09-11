@@ -1,0 +1,14 @@
+[
+  { "transfer_id": "TXN-20260412-0001", "payee_id": "C-91002", "amount": 12500.00, "date": "2026-04-12" },
+  { "transfer_id": "TXN-20260530-0002", "payee_id": "C-82190", "amount": 30000.00, "date": "2026-05-30" },
+  { "transfer_id": "TXN-20260615-0003", "payee_id": "C-77802", "amount": 8750.50, "date": "2026-06-15" },
+  { "transfer_id": "TXN-20260709-0004", "payee_id": "C-80233", "amount": 45000.00, "date": "2026-07-09" },
+  { "transfer_id": "TXN-20260722-0005", "payee_id": "C-91002", "amount": 22000.00, "date": "2026-07-22" },
+  { "transfer_id": "TXN-20260731-0006", "payee_id": "C-88214", "amount": 15000.00, "date": "2026-07-31" },
+  { "transfer_id": "TXN-20260812-0007", "payee_id": "C-88214", "amount": 50000.00, "date": "2026-08-12" },
+  { "transfer_id": "TXN-20260819-0008", "payee_id": "C-81066", "amount": 9600.00, "date": "2026-08-19" },
+  { "transfer_id": "TXN-20260824-0009", "payee_id": "C-88770", "amount": 27500.00, "date": "2026-08-24" },
+  { "transfer_id": "TXN-20260828-0010", "payee_id": "C-77341", "amount": 18250.00, "date": "2026-08-28" },
+  { "transfer_id": "TXN-20260901-0011", "payee_id": "C-78115", "amount": 62000.00, "date": "2026-09-01" },
+  { "transfer_id": "TXN-20260903-0012", "payee_id": "C-88770", "amount": 41000.00, "date": "2026-09-03" }
+]

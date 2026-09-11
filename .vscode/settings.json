@@ -1,0 +1,9 @@
+{
+    "coda.advancedSettings": {
+        "backendPort": 59656,
+        "headersTimeout": 0,
+        "bodyTimeout": 0
+    },
+    "python.terminal.useEnvFile": true,
+    "python.envFile": "${workspaceFolder}/payee-demo/.env"
+}

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" viewBox="0 0 1060 792" role="img" width="100%" aria-label="Architecture of the payee disambiguation demo. A Streamlit UI calls a LangGraph agent. Four distinct agents make their own separate model calls: the resolver, the confidence judge, the independent verifier which exists only in multi-agent mode, and the question answerer. Structured payee records and a Chroma vector store supply data. OpenTelemetry spans export to Arize Phoenix or Langfuse.">
+<rect x="0" y="0" width="1060" height="792" fill="#0f1218"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#e9edf5"/></marker><marker id="ard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7ba3f7"/></marker></defs>
+<text x="34" y="38" font-size="11" font-weight="600" letter-spacing="2.2" fill="#e9edf5" opacity=".45">INTERFACE</text>
+<rect x="34" y="50" width="700" height="54" rx="9" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="384.0" y="75.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">Streamlit UI</text>
+<text x="384.0" y="92.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">ui/streamlit_app.py — toggles: grounding · guardrails · multi-agent</text>
+<line x1="384" y1="104" x2="384" y2="136" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<text x="384.0" y="113.0" text-anchor="middle" font-size="11" fill="#e9edf5" opacity=".8">run(instruction)</text>
+<text x="34" y="156" font-size="11" font-weight="600" letter-spacing="2.2" fill="#e9edf5" opacity=".45">ORCHESTRATION</text>
+<rect x="34" y="168" width="700" height="120" rx="9" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="384.0" y="226.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">LangGraph  StateGraph</text>
+<text x="384.0" y="243.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">app/graph.py — one compiled graph per mode</text>
+<rect x="50" y="228" width="74" height="44" rx="7" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="87.0" y="255.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">parse</text>
+<line x1="124" y1="250" x2="132" y2="250" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="132" y="228" width="74" height="44" rx="7" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="169.0" y="255.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">lookup</text>
+<line x1="206" y1="250" x2="214" y2="250" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="214" y="228" width="74" height="44" rx="7" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="251.0" y="255.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">retrieve</text>
+<line x1="288" y1="250" x2="296" y2="250" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="296" y="228" width="74" height="44" rx="7" fill="#1e2a44" stroke="#7ba3f7" stroke-opacity="1" stroke-width="1.7"/>
+<text x="333.0" y="255.0" text-anchor="middle" font-size="14" font-weight="600" fill="#7ba3f7">resolve</text>
+<line x1="370" y1="250" x2="378" y2="250" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="378" y="228" width="74" height="44" rx="7" fill="#1e2a44" stroke="#7ba3f7" stroke-opacity="1" stroke-width="1.7"/>
+<text x="415.0" y="255.0" text-anchor="middle" font-size="14" font-weight="600" fill="#7ba3f7">gate</text>
+<line x1="452" y1="250" x2="460" y2="250" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="460" y="228" width="74" height="44" rx="7" fill="#1e2a44" stroke="#7ba3f7" stroke-opacity="1" stroke-width="1.7" stroke-dasharray="6 4"/>
+<text x="497.0" y="255.0" text-anchor="middle" font-size="14" font-weight="600" fill="#7ba3f7">verify</text>
+<line x1="534" y1="250" x2="542" y2="250" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="542" y="228" width="74" height="44" rx="7" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="579.0" y="255.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">execute</text>
+<line x1="616" y1="250" x2="624" y2="250" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="624" y="228" width="74" height="44" rx="7" fill="#1e2a44" stroke="#7ba3f7" stroke-opacity="1" stroke-width="1.7"/>
+<text x="661.0" y="255.0" text-anchor="middle" font-size="14" font-weight="600" fill="#7ba3f7">compose</text>
+<text x="542" y="286" text-anchor="middle" font-size="9.5" fill="#7ba3f7" opacity=".9">MULTI-AGENT ONLY</text>
+<line x1="150" y1="288" x2="150" y2="344" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<text x="150.0" y="309.0" text-anchor="middle" font-size="11" fill="#e9edf5" opacity=".8">reads</text>
+<line x1="560" y1="288" x2="560" y2="344" stroke="#7ba3f7" stroke-width="1.5" opacity="0.9" marker-end="url(#ard)"/>
+<text x="560.0" y="309.0" text-anchor="middle" font-size="11" fill="#7ba3f7" opacity=".8">each calls its own model</text>
+<text x="34" y="364" font-size="11" font-weight="600" letter-spacing="2.2" fill="#e9edf5" opacity=".45">DATA</text>
+<rect x="34" y="376" width="300" height="74" rx="9" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="184.0" y="411.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">Structured records</text>
+<text x="184.0" y="428.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">payees.json · transfer_history.json</text>
+<rect x="34" y="466" width="300" height="74" rx="9" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="184.0" y="501.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">Chroma vector store</text>
+<text x="184.0" y="518.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">36 chunks · local ONNX embeddings</text>
+<text x="400" y="364" font-size="11" font-weight="600" letter-spacing="2.2" fill="#e9edf5" opacity=".45">AGENTS — EACH ITS OWN MODEL CALL</text>
+<rect x="400" y="376" width="334" height="58" rx="9" fill="#1e2a44" stroke="#7ba3f7" stroke-opacity="1" stroke-width="1.7"/>
+<text x="567.0" y="403.0" text-anchor="middle" font-size="14" font-weight="600" fill="#7ba3f7">Agent 1 · resolver</text>
+<text x="567.0" y="420.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">skill.payee_disambiguation</text>
+<text x="725" y="391" text-anchor="end" font-size="9.5" fill="#7ba3f7" opacity=".85" letter-spacing=".5">ALWAYS</text>
+<rect x="400" y="442" width="334" height="58" rx="9" fill="#1e2a44" stroke="#7ba3f7" stroke-opacity="1" stroke-width="1.7"/>
+<text x="567.0" y="469.0" text-anchor="middle" font-size="14" font-weight="600" fill="#7ba3f7">Judge · guardrail</text>
+<text x="567.0" y="486.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">skill.confidence_judge</text>
+<text x="725" y="457" text-anchor="end" font-size="9.5" fill="#7ba3f7" opacity=".85" letter-spacing=".5">GUARDRAILS ON</text>
+<rect x="400" y="508" width="334" height="58" rx="9" fill="#1e2a44" stroke="#7ba3f7" stroke-opacity="1" stroke-width="1.7" stroke-dasharray="6 4"/>
+<text x="567.0" y="535.0" text-anchor="middle" font-size="14" font-weight="600" fill="#7ba3f7">Agent 2 · verifier</text>
+<text x="567.0" y="552.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">skill.independent_verification</text>
+<text x="725" y="523" text-anchor="end" font-size="9.5" fill="#7ba3f7" opacity=".85" letter-spacing=".5">MULTI-AGENT ONLY</text>
+<rect x="400" y="574" width="334" height="58" rx="9" fill="#1e2a44" stroke="#7ba3f7" stroke-opacity="1" stroke-width="1.7" stroke-dasharray="6 4"/>
+<text x="567.0" y="601.0" text-anchor="middle" font-size="14" font-weight="600" fill="#7ba3f7">Answerer</text>
+<text x="567.0" y="618.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">skill.answer_question</text>
+<text x="725" y="589" text-anchor="end" font-size="9.5" fill="#7ba3f7" opacity=".85" letter-spacing=".5">QUESTIONS ONLY</text>
+<text x="567" y="640" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62">the verifier is never shown the resolver&#8217;s reasoning</text>
+<line x1="567" y1="648" x2="567" y2="676" stroke="#7ba3f7" stroke-width="1.5" opacity="0.9" marker-end="url(#ard)"/>
+<rect x="400" y="676" width="334" height="54" rx="9" fill="#1e2a44" stroke="#7ba3f7" stroke-opacity="1" stroke-width="1.7"/>
+<text x="567.0" y="701.0" text-anchor="middle" font-size="14" font-weight="600" fill="#7ba3f7">OpenAI-compatible endpoint</text>
+<text x="567.0" y="718.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">gpt-4o-mini — swappable by MODEL_PROVIDER</text>
+<line x1="334" y1="492" x2="400" y2="414" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" stroke-dasharray="4 4" marker-end="url(#ar)"/>
+<text x="367" y="440" text-anchor="middle" font-size="10.5" fill="#e9edf5" opacity=".6">context</text>
+<text x="778" y="38" font-size="11" font-weight="600" letter-spacing="2.2" fill="#e9edf5" opacity=".45">TELEMETRY</text>
+<rect x="770" y="50" width="256" height="680" rx="12" fill="none" stroke="#e9edf5" stroke-opacity=".22" stroke-dasharray="6 5"/>
+<rect x="788" y="78" width="220" height="56" rx="9" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="898.0" y="104.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">OpenInference</text>
+<text x="898.0" y="121.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">auto-instruments LangChain</text>
+<line x1="898" y1="134" x2="898" y2="166" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="788" y="178" width="220" height="56" rx="9" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="898.0" y="204.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">OpenTelemetry SDK</text>
+<text x="898.0" y="221.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">BatchSpanProcessor</text>
+<line x1="898" y1="234" x2="898" y2="266" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="788" y="278" width="220" height="56" rx="9" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="898.0" y="304.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">OTLP / HTTP</text>
+<text x="898.0" y="321.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">one wire format</text>
+<line x1="898" y1="334" x2="898" y2="392" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" marker-end="url(#ar)"/>
+<rect x="788" y="404" width="220" height="68" rx="9" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="898.0" y="436.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">Arize Phoenix</text>
+<text x="898.0" y="453.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">local · span tree</text>
+<rect x="788" y="492" width="220" height="68" rx="9" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="898.0" y="524.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">Langfuse</text>
+<text x="898.0" y="541.0" text-anchor="middle" font-size="11.5" fill="#e9edf5" opacity=".62" font-family="ui-monospace,monospace">hosted · cost per trace</text>
+<text x="898" y="486" text-anchor="middle" font-size="10.5" fill="#e9edf5" opacity=".55">TELEMETRY_BACKEND picks one</text>
+<text x="898" y="600" text-anchor="middle" font-size="11" fill="#e9edf5" opacity=".55">every node, tool and</text>
+<text x="898" y="616" text-anchor="middle" font-size="11" fill="#e9edf5" opacity=".55">agent call becomes a span</text>
+<line x1="736" y1="95" x2="766" y2="95" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" stroke-dasharray="4 4" marker-end="url(#ar)"/>
+<line x1="736" y1="250" x2="766" y2="250" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" stroke-dasharray="4 4" marker-end="url(#ar)"/>
+<line x1="736" y1="430" x2="766" y2="430" stroke="#e9edf5" stroke-width="1.5" opacity="0.5" stroke-dasharray="4 4" marker-end="url(#ar)"/>
+<text x="34" y="752" font-size="11" font-weight="600" letter-spacing="2.2" fill="#e9edf5" opacity=".45">RUNTIME</text>
+<rect x="34" y="762" width="1000" height="26" rx="7" fill="#161b24" stroke="#e9edf5" stroke-opacity=".30" stroke-width="1.2"/>
+<text x="534.0" y="780.0" text-anchor="middle" font-size="14" font-weight="600" fill="#e9edf5">Docker · python:3.11-slim · index built at image build time · non-root uid 10001</text>
+</svg>

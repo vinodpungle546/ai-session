@@ -1,0 +1,98 @@
+[
+  {
+    "payee_id": "C-88214",
+    "name": "Rajesh Kumar Sharma",
+    "account_last4": "4471",
+    "is_joint": false,
+    "last_transfer_date": "2026-08-12",
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-90117",
+    "name": "Rajesh Kumar Verma",
+    "account_last4": "2093",
+    "is_joint": false,
+    "last_transfer_date": null,
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-88770",
+    "name": "Rajesh K. Sharma",
+    "account_last4": "4471",
+    "is_joint": true,
+    "last_transfer_date": "2026-09-03",
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-91002",
+    "name": "Rajesh Kumar",
+    "account_last4": "8830",
+    "is_joint": false,
+    "last_transfer_date": "2026-07-22",
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-77341",
+    "name": "Anita Deshpande",
+    "account_last4": "1156",
+    "is_joint": false,
+    "last_transfer_date": "2026-08-28",
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-77802",
+    "name": "Farhan Qureshi",
+    "account_last4": "3382",
+    "is_joint": false,
+    "last_transfer_date": "2026-06-15",
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-78115",
+    "name": "Meera Nair",
+    "account_last4": "5719",
+    "is_joint": true,
+    "last_transfer_date": "2026-09-01",
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-79420",
+    "name": "Vikram Choudhary",
+    "account_last4": "6204",
+    "is_joint": false,
+    "last_transfer_date": null,
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-80233",
+    "name": "Sunita Bhattacharya",
+    "account_last4": "7743",
+    "is_joint": false,
+    "last_transfer_date": "2026-07-09",
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-81066",
+    "name": "Imran Sheikh",
+    "account_last4": "9018",
+    "is_joint": false,
+    "last_transfer_date": "2026-08-19",
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-82190",
+    "name": "Priya Menon",
+    "account_last4": "2467",
+    "is_joint": true,
+    "last_transfer_date": "2026-05-30",
+    "owner_customer_id": "CUST-1001"
+  },
+  {
+    "payee_id": "C-83574",
+    "name": "Arjun Rathore",
+    "account_last4": "8891",
+    "is_joint": false,
+    "last_transfer_date": null,
+    "owner_customer_id": "CUST-1001"
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "instruction": "Transfer 50,000 to Rajesh Kumar Verma",
+  "customer_id": "CUST-1001",
+  "amount": 50000.0,
+  "candidates": [
+    {
+      "payee_id": "C-90117",
+      "name": "Rajesh Kumar Verma",
+      "account_last4": "2093",
+      "is_joint": false,
+      "last_transfer_date": null,
+      "owner_customer_id": "CUST-1001"
+    }
+  ],
+  "resolved_payee_id": "C-90117",
+  "confidence": 1.0,
+  "grounded": true,
+  "blocked": false,
+  "block_reason": null,
+  "verification": null,
+  "response": "Transferred 50,000.00 to Rajesh Kumar Verma (C-90117). Reference f9100b6d-be31-4f7f-b835-15cf3f332630.",
+  "trace_id": "0a4a6375adf09a0b47f835dd1e92166a",
+  "name_fragment": "Rajesh Kumar Verma",
+  "context": [
+    {
+      "content": "## Account details\n\nThe full masked account number for Rajesh Kumar Verma is **XXXX XXXX 2093**. Only the final four digits (2093) are visible; the preceding digits are masked and are not stored in this record.\n\nThe account type is **Savings**.\n\nThis **is not a joint account**. Rajesh Kumar Verma is the sole holder of account XXXX XXXX 2093.",
+      "source_file": "C-90117.md",
+      "payee_id": "C-90117",
+      "distance": 0.2200869917869568
+    },
+    {
+      "content": "## Transfer activity\n\nThere are no recorded transfers to Rajesh Kumar Verma (C-90117). This payee has never received a transfer from CUST-1001, so it cannot be the subject of a reference such as \"the same as last time\".",
+      "source_file": "C-90117.md",
+      "payee_id": "C-90117",
+      "distance": 0.38157421350479126
+    },
+    {
+      "content": "## Account details\n\nThe full masked account number for Rajesh Kumar is **XXXX XXXX 8830**. Only the final four digits (8830) are visible; the preceding digits are masked and are not stored in this record.\n\nThe account type is **Current**.\n\nThis **is not a joint account**. Rajesh Kumar is the sole holder of account XXXX XXXX 8830.",
+      "source_file": "C-91002.md",
+      "payee_id": "C-91002",
+      "distance": 0.38217461109161377
+    },
+    {
+      "content": "## Account details\n\nThe full masked account number for Rajesh Kumar Sharma is **XXXX XXXX 4471**. Only the final four digits (4471) are visible; the preceding digits are masked and are not stored in this record.\n\nThe account type is **Savings**.\n\nThis **is not a joint account**. Rajesh Kumar Sharma is the sole holder of account XXXX XXXX 4471.",
+      "source_file": "C-88214.md",
+      "payee_id": "C-88214",
+      "distance": 0.390563428401947
+    }
+  ],
+  "judge": {
+    "confidence": 1.0,
+    "rationale": "The proposed payee matches the name in the transfer instruction exactly, and there are no competing payees listed.",
+    "competing_payee_ids": [],
+    "judge_available": true
+  },
+  "structural_reasons": [],
+  "transfer": {
+    "status": "executed",
+    "payee_id": "C-90117",
+    "amount": 50000.0,
+    "reference": "f9100b6d-be31-4f7f-b835-15cf3f332630"
+  }
+}

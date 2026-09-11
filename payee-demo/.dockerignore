@@ -1,0 +1,29 @@
+# Build context hygiene. The venv alone is ~1 GB -- excluding it is the
+# difference between a fast build and uploading the whole world to the daemon.
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Never bake secrets into an image.
+.env
+.env.*
+!.env.example
+
+# Built or captured at runtime, not shipped.
+chroma_store/
+fixtures/
+evals/last_run.json
+
+# Local noise.
+.git/
+.gitignore
+.github/
+.vscode/
+.idea/
+.DS_Store
+*.log
+deploy/
+README.md
