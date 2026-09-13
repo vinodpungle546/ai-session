@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-10T01:04:06",
+  "timestamp": "2026-09-12T11:50:01",
   "config": {
     "model": "gpt-4o-mini",
     "provider": "openai_compatible",
@@ -21,7 +21,7 @@
     }
   },
   "gate_passed": true,
-  "elapsed_seconds": 32.4,
+  "elapsed_seconds": 10.8,
   "results": [
     {
       "id": "U01",
@@ -36,7 +36,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 11.96
+      "seconds": 5.5
     },
     {
       "id": "U02",
@@ -51,7 +51,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 11.92
+      "seconds": 5.18
     },
     {
       "id": "U03",
@@ -66,7 +66,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 12.09
+      "seconds": 5.25
     },
     {
       "id": "U04",
@@ -81,7 +81,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 11.56
+      "seconds": 5.1
     },
     {
       "id": "U05",
@@ -96,7 +96,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 7.98
+      "seconds": 1.79
     },
     {
       "id": "U06",
@@ -111,7 +111,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 8.21
+      "seconds": 2.04
     },
     {
       "id": "U07",
@@ -126,7 +126,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 8.32
+      "seconds": 1.83
     },
     {
       "id": "U08",
@@ -141,7 +141,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 7.78
+      "seconds": 1.77
     },
     {
       "id": "U09",
@@ -156,7 +156,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 7.74
+      "seconds": 1.81
     },
     {
       "id": "U10",
@@ -171,7 +171,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 8.31
+      "seconds": 1.67
     },
     {
       "id": "U11",
@@ -186,7 +186,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 8.05
+      "seconds": 1.99
     },
     {
       "id": "U12",
@@ -201,7 +201,7 @@
       "wrong_payee_execution": false,
       "passed": true,
       "reason": "",
-      "seconds": 10.96
+      "seconds": 1.88
     }
   ]
 }
